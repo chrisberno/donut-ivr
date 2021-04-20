@@ -5,7 +5,9 @@ const qs = require('querystring');
 const VoiceResponse = twilio.twiml.VoiceResponse;
 
 exports.handler = async (event) => {
-  const types = await fetch('/types').then((res) => res.json());
+  const types = await fetch(`${process.env.URL}/types`).then((res) =>
+    res.json(),
+  );
 
   const twiml = new VoiceResponse();
 

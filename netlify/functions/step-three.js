@@ -10,7 +10,9 @@ exports.handler = async (event) => {
 
   console.log({ Digits });
 
-  const types = await fetch('/types').then((res) => res.json());
+  const types = await fetch(`${process.env.URL}/types`).then((res) =>
+    res.json(),
+  );
 
   const secondType = types[Digits - 1];
 
@@ -19,7 +21,7 @@ exports.handler = async (event) => {
   }
 
   const donuts = await fetch(
-    `/donuts?type=${firstType},${secondType}`,
+    `${process.env.URL}/donuts?type=${firstType},${secondType}`,
   ).then((res) => res.json());
 
   const donut = donuts[0];
