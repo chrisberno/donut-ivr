@@ -10,9 +10,7 @@ exports.handler = async (event) => {
 
   console.log({ Digits });
 
-  const types = await fetch('http://localhost:3000/types').then((res) =>
-    res.json(),
-  );
+  const types = await fetch('/types').then((res) => res.json());
 
   const secondType = types[Digits - 1];
 
@@ -21,7 +19,7 @@ exports.handler = async (event) => {
   }
 
   const donuts = await fetch(
-    `http://localhost:3000/donuts?type=${firstType},${secondType}`,
+    `/donuts?type=${firstType},${secondType}`,
   ).then((res) => res.json());
 
   const donut = donuts[0];
