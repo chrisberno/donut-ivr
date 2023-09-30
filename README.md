@@ -4,7 +4,7 @@
   </a>
 </p>
 <h1 align="center">
-  Build a Custom IVR Using Twilio (with Nathaniel Okenwa) — Learn With Jason
+  Build a responsive Donut-on-Demand IVR Using Twilio (Many thanks Nathaniel Okenwa & Jason Lengstort for the live stream & code base).
 </h1>
 <h3 align="center">
   This app was built live on <em>Learn With Jason</em> and it was super fun and I’m sad you weren’t there.
