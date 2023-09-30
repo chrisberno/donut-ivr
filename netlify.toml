@@ -11,3 +11,4 @@
   from = '/types'
   to = '/.netlify/functions/donuts'
   status = 200
+  targetPort = 8080
